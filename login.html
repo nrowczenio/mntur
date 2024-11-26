@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="combined_styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Login Form -->
+  <main>
+    <section class="login-container">
+      <h1>Welcome Back</h1>
+      <p>Please log in to continue</p>
+      <form id="login-form" class="form">
+        <div id="alert"></div>
+        
+        <label for="email-or-username">Email or Username</label>
+        <input type="text" id="email-or-username" placeholder="Enter your email or username" required />
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required />
+        
+        <button type="submit" class="primary-btn">Log in</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="nav.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

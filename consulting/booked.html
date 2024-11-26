@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table with Apply Button</title>
+    
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .apply-button {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .apply-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="../combined_styles.css">
+
+    <script src="../logout.js"></script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+   
+    <h1>Schedule</h1>
+
+    <div id="role-buttons"></div> 
+
+    <body>
+        <h1>DynamoDB Table Data</h1>
+        <table id="data-table">
+            <thead>
+              <tr>
+                <th>Item Name</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Date</th>
+                <th>User ID</th>
+                <th>Attendee</th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
+
+    <script src="https://cdn.userfront.com/core.js"></script>
+    
+    <script>var exports = {};</script>
+
+    <script src="booked.js"></script>
+    <script src="../nav.js"></script>
+</body>
+
+<script type="text/javascript">
+    (function(w, d, x, id){
+      s=d.createElement('script');
+      s.src='https://d2zasqxhmd6ne4.cloudfront.net/amazon-connect-chat-interface-client.js';
+      s.async=1;
+      s.id=id;
+      d.getElementsByTagName('head')[0].appendChild(s);
+      w[x] =  w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
+    })(window, document, 'amazon_connect', 'b0c11d17-f420-460e-b1ea-cd64824e2594');
+    amazon_connect('styles', { iconType: 'CHAT', openChat: { color: '#ffffff', backgroundColor: '#123456' }, closeChat: { color: '#ffffff', backgroundColor: '#123456'} });
+    amazon_connect('snippetId', 'QVFJREFIaCtFalN0ZDVNdVlGRUhSSWxuYkZIVi9vOWJuK3J1RHFLMnREVloybXpFTVFHMjMyTkMxcTNCdjNGVGUramk0MHZCQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNdGVPbUZERmtocktxTm5BWEFnRVFnQ3Nab1ptb0RFanViays1OHYwWUNpOEZGNGVXYlM4NGhsN3hwS3VRSGlTSzcwM3Z4dU9TQW9GYUNiNXA6Om11ZlF4K3Nzb1RmMDNBVVNPVDFEY3NoK1REaXJVVDMzYlBqWGhOcU5lajRWVVg1MVRGMHZ1U3lvZ2N1eGhVUW4wRmVhNUgybTNCejJpVm1mUzhjU0FRRW9LQkNOK2F0Qm5nbDJGVDNXVVRUTGlJSUkzQ0trK0w5Kzh6T3ZqQmZ3ZkhjYWg4b0FJRFBGM1l3NitPUzUxalVBT1Z4VnZhTT0=');
+    amazon_connect('supportedMessagingContentTypes', [ 'text/plain', 'text/markdown', 'application/vnd.amazonaws.connect.message.interactive', 'application/vnd.amazonaws.connect.message.interactive.response' ]);
+  </script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="combined_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.userfront.com/core.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="logout.js"></script>
+</head>
+<body>
+  <!-- Navbar Placeholder -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Dashboard Content -->
+  <main>
+    <br><br><br><br>
+    <div class="dashboard-container">
+        <h1>Welcome, <span id="user-name">User</span>!</h1>
+        <p>Your role: <span id="user-role">Loading...</span></p>
+        <p>Your email: <span id="user-email">Loading...</span></p>
+
+        <section class="user-info">
+            <h2>Your Profile</h2>
+            <p><strong>University:</strong> <span id="university">Loading...</span></p>
+            <p><strong>Degree:</strong> <span id="degree">Loading...</span></p>
+            <p><strong>Interests:</strong> <span id="interests">Loading...</span></p>
+            <p><strong>Description:</strong> <span id="description">Loading...</span></p>
+        </section>
+
+        <!-- Info Cards Section -->
+        <section class="info-cards">
+            <div class="card">
+                <h2>Practice Interviewing</h2>
+                <p>Book onto events where you can practice interviewing with experienced professionals and receive valuable feedback.</p>
+            </div>
+            <div class="card">
+                <h2>Join Panels and Q&As</h2>
+                <p>Participate in panels and Q&A sessions to gain insights from industry leaders and expand your network.</p>
+            </div>
+            <div class="card">
+                <h2>1:1 Mentorship</h2>
+                <p>Book a 1:1 mentorship session to get personalized guidance from our expert consultants. Check out the <a href="consultants.html">Consultants Page</a> for more details.</p>
+            </div>
+        </section>
+    </div>
+  </main>
+
+  <script src="./nav.js"></script>
+</body>
+</html>

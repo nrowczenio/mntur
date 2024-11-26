@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="index_styles.css">
+
+   <script defer src="https://cdn.userfront.com/@userfront/toolkit@latest/dist/web-component.umd.js"></script>
+   <script src="https://cdn.userfront.com/core.js"></script>
+   <script>
+    // Initialize Userfront with your tenant ID
+    Userfront.init("9nyyprwn");
+
+    // Fetch and log user info
+    document.addEventListener("DOMContentLoaded", function() {
+        Userfront.user.update().then(() => {
+            console.log("User ID:", Userfront.user.userId);
+            console.log("User Email:", Userfront.user.email);
+            console.log("User Role:", Userfront.user.role);
+            console.log("User Data:", Userfront.user.data); // Additional user data
+        }).catch((error) => {
+            console.error("Error fetching user info:", error);
+        });
+    });
+</script>
+   <script src="combined_redirect.js"></script>
+
+</head>
+<body>
+  <h1>Login</h1>
+  <p>login to one of the following portals</p>
+  <nav>
+    <a href="#" id="home-button">Home</a> 
+  </nav>
+  <div class="logout-button-container">
+    <logout-button tenant-id="9nyyprwn" theme='{
+        "colors":{
+            "light":"#ffffff",
+            "dark":"#5e72e4",
+            "accent":"#13a0ff",
+            "lightBackground":"#fdfdfd",
+            "darkBackground":"#2d2d2d"
+        },
+        "colorScheme":"auto",
+        "fontFamily":"Avenir, Helvetica, Arial, sans-serif",
+        "size":"default",
+        "extras":{
+            "rounded":true,
+            "hideSecuredMessage":false
+        }
+    }'></logout-button>
+</div>
+  <main>
+    <form id="signup-form">
+      <div id="alert"></div>
+    
+      <label for="email">Email address</label>
+      <input type="email" id="email" />
+    
+      <label for="account-name">Account name (custom field)</label>
+      <input type="text" id="account-name" />
+    
+      <label for="password">Password</label>
+      <input type="password" id="password" />
+    
+      <label for="password-verify">Verify password</label>
+      <input type="password" id="password-verify" />
+    
+      <button type="submit">Sign up</button>
+    </form>
+    <signup-form tenant-id="9nyyprwn" theme='{"colors":{"light":"#ffffff","dark":"#5e72e4","accent":"#13a0ff","lightBackground":"#fdfdfd","darkBackground":"#2d2d2d"},"colorScheme":"auto","fontFamily":"Avenir, Helvetica, Arial, sans-serif","size":"default","extras":{"hideSecuredMessage":false}}'></signup-form>
+    <h1>Login Instructions</h1>
+    
+    <div class="login-box">
+        <h2>How to Login</h2>
+        <p>Choose your access level from the navigation bar on the left:</p>
+        <ul>
+            <li><strong>User:</strong> Click on "User" to access the user portal.</li>
+            <li><strong>Staff:</strong> Click on "Staff" to access the staff portal.</li>
+            <li><strong>Admin:</strong> Click on "Admin" to access the admin portal.</li>
+        </ul>
+        <p>After clicking, you will be redirected to the appropriate login page.</p>
+    </div>
+    
+</main>
+
+</body>
+
+<script type="text/javascript">
+    (function(w, d, x, id){
+      s=d.createElement('script');
+      s.src='https://d2zasqxhmd6ne4.cloudfront.net/amazon-connect-chat-interface-client.js';
+      s.async=1;
+      s.id=id;
+      d.getElementsByTagName('head')[0].appendChild(s);
+      w[x] =  w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
+    })(window, document, 'amazon_connect', 'b0c11d17-f420-460e-b1ea-cd64824e2594');
+    amazon_connect('styles', { iconType: 'CHAT', openChat: { color: '#ffffff', backgroundColor: '#123456' }, closeChat: { color: '#ffffff', backgroundColor: '#123456'} });
+    amazon_connect('snippetId', 'QVFJREFIaCtFalN0ZDVNdVlGRUhSSWxuYkZIVi9vOWJuK3J1RHFLMnREVloybXpFTVFHMjMyTkMxcTNCdjNGVGUramk0MHZCQUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNdGVPbUZERmtocktxTm5BWEFnRVFnQ3Nab1ptb0RFanViays1OHYwWUNpOEZGNGVXYlM4NGhsN3hwS3VRSGlTSzcwM3Z4dU9TQW9GYUNiNXA6Om11ZlF4K3Nzb1RmMDNBVVNPVDFEY3NoK1REaXJVVDMzYlBqWGhOcU5lajRWVVg1MVRGMHZ1U3lvZ2N1eGhVUW4wRmVhNUgybTNCejJpVm1mUzhjU0FRRW9LQkNOK2F0Qm5nbDJGVDNXVVRUTGlJSUkzQ0trK0w5Kzh6T3ZqQmZ3ZkhjYWg4b0FJRFBGM1l3NitPUzUxalVBT1Z4VnZhTT0=');
+    amazon_connect('supportedMessagingContentTypes', [ 'text/plain', 'text/markdown', 'application/vnd.amazonaws.connect.message.interactive', 'application/vnd.amazonaws.connect.message.interactive.response' ]);
+  </script>
+</html>

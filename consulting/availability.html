@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Availability</title>
+    <link rel="stylesheet" href="../combined_styles.css">
+    <script src="../logout.js"></script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+    <h1>Submit Availability</h1>
+
+    <form id="availabilityForm">
+        <div id="weekSelector">
+            <button type="button" id="prevWeek">&lt; Previous Week</button>
+            <span id="currentWeek"></span>
+            <button type="button" id="nextWeek">Next Week &gt;</button>
+        </div>
+        <div id="availabilityGrid"></div>
+        <input type="submit" value="Submit Availability">
+    </form>
+
+    <div id="result"></div>
+    <script src="https://cdn.userfront.com/core.js"></script>
+    <script src="availability.js"></script>
+    <script src="../nav.js"></script>
+</body>
+</html>

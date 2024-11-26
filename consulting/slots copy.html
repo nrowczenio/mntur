@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Availability View</title>
+    <link rel="stylesheet" href="../combined_styles.css">
+    <script src="../logout.js"></script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+    <h1>Availability</h1>
+
+    <div class="date-selector">
+        <button onclick="fetchAvailability()" class="fetch-button">Fetch Availability</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody id="availabilityBody">
+            <!-- Availability data will be inserted here -->
+        </tbody>
+    </table>
+  
+  <button id="confirmButton" class="confirm-button">Confirm Booking</button>
+  
+    <script src="https://cdn.userfront.com/core.js"></script>
+    <script src="slots.js"></script>
+    <script src="../nav.js"></script>
+</body>
+</html>

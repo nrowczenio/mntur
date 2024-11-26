@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Your Consultant Profile</title>
+    <link rel="stylesheet" href="../combined_styles.css">
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+    <br><br><br><br>
+
+    <main class="profile-container">
+        <h1>Update Profile</h1>
+        <form id="simpleForm">
+            <label for="education">Education:</label>
+            <input type="text" id="education" name="education" placeholder="Enter your education" required>
+
+            <label for="experience">Experience:</label>
+            <input type="text" id="experience" name="experience" placeholder="Enter your experience" required>
+
+            <label for="industry">Industry:</label>
+            <input type="text" id="industry" name="industry" placeholder="Enter your industry" required>
+
+            <label for="desc">Description:</label>
+            <input type="text" id="desc" name="desc" placeholder="Brief description about you" required>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="result"></div>
+    </main>
+
+    <script src="https://cdn.userfront.com/core.js"></script>
+    <script src="../nav.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>
