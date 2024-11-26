@@ -1,0 +1,25 @@
+name: Maven Build
+
+on:
+  push:
+    branches:
+      - main  # Run workflow on pushes to the 'main' branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Java
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'  # Use Java 11
+
+      # Step 3: Build the site
+      - name: Build static site
+        run: mvn clean site
