@@ -31,7 +31,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
 
-    steps:   # Step 1: Trigger Jenkins Pipeline
+    steps: 
       - name: Trigger Jenkins Pipeline
       run: |
         curl -X POST "${{ secrets.JENKINS_URL }}/job/deploystaticweb/buildWithParameters" \
